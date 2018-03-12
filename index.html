@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/1.11.0.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<title>门店页面设置</title>
+	</head>
+
+	<body>
+		<table class="table" id="pick_list">
+			<tr>
+				<td>ID</td>
+				<td>门店编号</td>
+				<td>门店名称</td>
+				<td>是否设置门店</td>
+				<td>设置站点</td>
+				<td>操作</td>
+			</tr>
+			<tr v-for="(item, index) of items" v-bind:item="item" v-bind:index="index" v-bind:key="item.id">
+				<td>{{ item.id }}</td>
+				<td>{{ item.rt_no }}</td>
+				<td>{{ item.rt_name }}</td>
+				<td>
+					<label class="radio-inline">
+                    <input type="radio" name="is_pick" v-model="item.is_pick" :name="item.id" @change="changeRadio(index,item.id,item.rt_no,item.rt_name,item.is_pick,item.pic_station)" value="1"> 是
+                    <input type="radio" name="is_pick" v-model="item.is_pick" :name="item.id" @change="changeRadio(index,item.id,item.rt_no,item.rt_name,item.is_pick,item.pic_station)" value="0"> 否
+                </label>
+				</td>
+				<td><input v-model.trim="item.pic_station"></td>
+				<td><button v-on:click="edit_message(item.id,item.is_pick,item.pic_station)">修改</button></td>
+			</tr>
+		</table>
+	</body>
+	<script type="text/javascript">
+    $.getJSON("json/store.json",function(rs){
+        var app7 = new Vue({
+            el: '#pick_list',
+            data: { items: rs},
+            methods: {
+                changeRadio:function(index,id,rt_no,rt_name,is_pick,pic_station){
+                    var temp = {id:id,rt_no:rt_no,rt_name:rt_name,is_pick:is_pick,pic_station:pic_station};
+                    this.items[index] = temp;                    
+                },
+                edit_message: function (id,is_pick,st_in_no) {
+                		console.log(app7.items);
+                }
+            }
+        })
+    })   
+</script>
+</html>

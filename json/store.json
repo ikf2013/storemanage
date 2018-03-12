@@ -1,0 +1,72 @@
+[   
+{   
+"id":1,   
+"is_pick":0,   
+"pic_station":"",
+"rt_no":"1001",
+"rt_name":"闸北店"
+},   
+{   
+	"id":2,   
+	"is_pick":0,   
+	"pic_station":"",
+	"rt_no":"1002",
+	"rt_name":"杨浦店"   
+},   
+{   
+	"id":3,   
+	"is_pick":0,   
+	"pic_station":"",
+	"rt_no":"1003",
+	"rt_name":"东环店"   
+},  
+{   
+	"id":4,   
+	"is_pick":0,   
+	"pic_station":"",
+	"rt_no":"1004",
+	"rt_name":"瑞金店"   
+},
+{   
+	"id":5,   
+	"is_pick":0,   
+	"pic_station":"",
+	"rt_no":"1005",
+	"rt_name":"大华店"   
+},
+{   
+	"id":6,   
+	"is_pick":0,   
+	"pic_station":"",
+	"rt_no":"1006",
+	"rt_name":"秀洲店"   
+},
+{   
+	"id":7,   
+	"is_pick":0,   
+	"pic_station":"",
+	"rt_no":"1007",
+	"rt_name":"常熟店"   
+},
+{   
+	"id":8,   
+	"is_pick":0,   
+	"pic_station":"",
+	"rt_no":"1008",
+	"rt_name":"关河店"   
+},
+{   
+	"id":9,   
+	"is_pick":0,   
+	"pic_station":"",
+	"rt_no":"1009",
+	"rt_name":"八仙城店"   
+},
+{   
+	"id":10,   
+	"is_pick":0,   
+	"pic_station":"",
+	"rt_no":"1010",
+	"rt_name":"邢江店"   
+}
+]
